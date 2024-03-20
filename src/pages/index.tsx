@@ -5,6 +5,8 @@ import { ValuesGrid } from '@/components/ValuesGrid/ValuesGrid';
 import { ValuesGridProps } from '@/components/ValuesGrid/ValuesGrid.types';
 import { CtaSubscribe } from '@/components/CtaSubscribe/CtaSubscribe';
 import { CtaSubscribeProps } from '@/components/CtaSubscribe/CtaSubscribe.types';
+import { FeaturedApplicationProps } from '@/components/FeaturedApplication/FeaturedApplication.types';
+import { FeaturedApplication } from '@/components/FeaturedApplication/FeaturedApplication';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,6 +42,22 @@ const ctaSection: CtaSubscribeProps = {
   },
 };
 
+const featuredApplicationSection: FeaturedApplicationProps = {
+  text: `
+  <p>
+    Boston Gear offers the industry’s largest line up of reliable speed reducers, gearing and other quality drivetrain components.
+  </p>
+  <p>
+    With well over a century of frontline experience, Boston Gear is recognized globally as a premier resource for extremely reliable, high-performance power transmission components. Boston Gear offers the industry’s most comprehensive product array featuring more than 30,000 standard products combined with the ability to custom engineer unique solutions when required.
+  </p>
+  `,
+  learnMoreText: 'Learn More',
+  learnMoreUrl: 'https://www.bostongear.com/en/company/overview',
+  title: 'FeatureD Application',
+  videoCaption: 'SS700 Reducers for Lettuce Mixing System',
+  videoUrl: 'https://altramotion.widen.net/content/oukwuhtsbu/mp4/P-7384-BG-V.mp4',
+};
+
 export default function Home() {
   return (
     <>
@@ -52,6 +70,7 @@ export default function Home() {
       <main className={`${styles.main} ${inter.className}`}>
         <ValuesGrid {...valuesGridProps} />
         <CtaSubscribe {...ctaSection} />
+        <FeaturedApplication {...featuredApplicationSection} />
       </main>
     </>
   );
