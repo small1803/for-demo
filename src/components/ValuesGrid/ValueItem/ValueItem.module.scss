@@ -1,0 +1,49 @@
+.card {
+  width: 100%;
+  min-height: auto;
+  background-color: #fff;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px;
+  display: flex;
+  gap: 15px;
+
+  @media screen and (max-width: 767px) {
+    & {
+      padding: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 479px) {
+    & {
+      flex-direction: column;
+      padding: 16px 16px 19px;
+    }
+  }
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+  aspect-ratio: 1 / 1;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.title {
+  font-weight: 500;
+  line-height: 150%;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 18px;
+  color: #282828;
+}
+
+.text {
+  font-family: Labgrotesque, sans-serif;
+  font-size: 15px;
+  line-height: 150%;
+}
